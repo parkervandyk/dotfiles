@@ -1,0 +1,10 @@
+#🌜 fullscreen a window
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# remove windows from tiling
+alt - t : yabai -m window --toggle float;\
+  yabai -m window --grid 4:4:1:1:2:2
+
+# lock screen immediately
+#cmd - escape : open -a ScreenSaverEngine
+
