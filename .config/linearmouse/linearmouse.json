@@ -1,0 +1,87 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : false,
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "option" : false,
+            "shift" : false,
+            "button" : 2,
+            "command" : false,
+            "control" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Wired Gaming Mouse",
+          "productID" : "0xb8",
+          "category" : "mouse",
+          "vendorID" : "0x32e3"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 3,
+        "speed" : 0.1,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : true,
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "option" : false,
+            "shift" : false,
+            "button" : 2,
+            "command" : false,
+            "control" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "productName" : "MX Master 3",
+          "serialNumber" : "90C6DE16F31966AB",
+          "productID" : "0xb023",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.5,
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      }
+    }
+  ]
+}
