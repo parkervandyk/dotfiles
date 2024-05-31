@@ -1,4 +1,6 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then
+  return {}
+end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
@@ -12,9 +14,9 @@ return {
   opts = {
     -- Configuration table of features provided by AstroLSP
     features = {
-      autoformat = true, -- enable or disable auto formatting on start
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
+      autoformat = true,   -- enable or disable auto formatting on start
+      codelens = true,     -- enable/disable codelens refresh on start
+      inlay_hints = true,  -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
@@ -73,7 +75,9 @@ return {
           -- the rest of the autocmd options (:h nvim_create_autocmd)
           desc = "Refresh codelens (buffer)",
           callback = function(args)
-            if require("astrolsp").config.features.codelens then vim.lsp.codelens.refresh { bufnr = args.buf } end
+            if require("astrolsp").config.features.codelens then
+              vim.lsp.codelens.refresh({ bufnr = args.buf })
+            end
           end,
         },
       },
@@ -83,15 +87,19 @@ return {
       n = {
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
         gD = {
-          function() vim.lsp.buf.declaration() end,
+          function()
+            vim.lsp.buf.declaration()
+          end,
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },
         ["<Leader>uY"] = {
-          function() require("astrolsp.toggles").buffer_semantic_tokens() end,
+          function()
+            require("astrolsp.toggles").buffer_semantic_tokens()
+          end,
           desc = "Toggle LSP semantic highlight (buffer)",
           cond = function(client)
-            return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens
+            return client.supports_method("textDocument/semanticTokens/full") and vim.lsp.semantic_tokens
           end,
         },
       },

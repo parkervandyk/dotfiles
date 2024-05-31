@@ -76,6 +76,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/local/bin:$PATH"
 export PATH="$HOME/.local/bin":$PATH
 export BAT_THEME="Dracula"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
