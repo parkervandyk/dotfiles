@@ -1,4 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd("let g:vimwiki_list = [{'path':'$HOME/notes'}]")
 
 local opt = vim.opt
 

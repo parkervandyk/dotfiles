@@ -4,4 +4,5 @@ return {
   "MunifTanjim/nui.nvim",
   "rcarriga/nvim-notify",
   "folke/noice.nvim",
+  "michal-h21/vimwiki-sync",
 }
