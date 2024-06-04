@@ -92,6 +92,13 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
         })
       end,
+      ["tsserver"] = function()
+        -- configure typescript language server
+        lspconfig["tsserver"].setup({
+          capabilities = capabilities,
+          filetypes = { "typescript", "javascript" },
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
