@@ -68,6 +68,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# fzf dracula colorscheme
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -96,6 +100,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
 alias ls="eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --all"
+alias fzf="fzf --preview='cat {}'"
 
 
 export NVM_DIR="$HOME/.config/nvm"
