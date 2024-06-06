@@ -5,4 +5,6 @@ return {
   "rcarriga/nvim-notify",
   "folke/noice.nvim",
   "michal-h21/vimwiki-sync",
+  "iamcco/markdown-preview.nvim",
+  "github/copilot.vim",
 }
