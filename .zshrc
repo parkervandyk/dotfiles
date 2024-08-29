@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Example aliases
 alias v=nvim
-alias vim=vim
+alias vim=nvim
 alias pip=pip3
 alias python=python3
 alias zshconfig="nvim ~/.zshrc"
