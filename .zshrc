@@ -120,6 +120,9 @@ docker() {
   fi
 
 }
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -127,3 +130,8 @@ eval "$(zoxide init --cmd cd zsh)"
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 PATH=~/.console-ninja/.bin:$PATH
+# Added by Windsurf
+export PATH="/Users/parkervandyk/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/parkervandyk/.lmstudio/bin"
