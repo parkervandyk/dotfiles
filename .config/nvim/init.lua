@@ -1,2 +1,2 @@
-require("parker.core")
-require("parker.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
