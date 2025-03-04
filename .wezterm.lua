@@ -16,7 +16,7 @@ line_numbers = true
 
 config.window_decorations = "RESIZE"
 -- For example, changing the color scheme:
-config.color_scheme = "Dracula (Official)"
+config.color_scheme = "Catppuccin Mocha"
 config.font_size = 12
 config.font = wezterm.font("Fira Code", { weight = "Bold", italic = false })
 -- config.window_background_opacity = 0.75
