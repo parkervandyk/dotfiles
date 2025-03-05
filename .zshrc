@@ -22,7 +22,7 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in dracula
+# Add in Catppuccin
 zinit ice depth=1; zinit ice pick"lib/async.zsh" src"dracula.zsh-theme"; zinit light dracula/zsh
 
 # Add in zsh plugins
@@ -79,7 +79,7 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/local/bin:$PATH"
 export PATH="$HOME/.local/bin":$PATH
-export BAT_THEME="Dracula"
+export BAT_THEME="Catppuccin"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 
