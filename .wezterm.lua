@@ -27,5 +27,23 @@ config.hide_tab_bar_if_only_one_tab = true
 config.hide_mouse_cursor_when_typing = true
 config.window_close_confirmation = "NeverPrompt"
 
+config.keys = {
+	{
+		key = "|",
+		mods = "CMD|CTRL|ALT|SHIFT", -- Hyper key
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "-",
+		mods = "CMD|CTRL|ALT|SHIFT", -- Hyper key
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "w",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
