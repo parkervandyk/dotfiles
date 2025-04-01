@@ -5,91 +5,91 @@
       "if" : {
         "device" : {
           "productID" : "0xb8",
-          "vendorID" : "0x32e3",
+          "productName" : "Wired Gaming Mouse",
           "category" : "mouse",
-          "productName" : "Wired Gaming Mouse"
+          "vendorID" : "0x32e3"
         }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 3,
+        "disableAcceleration" : false,
+        "speed" : 0.1
       },
       "buttons" : {
         "universalBackForward" : false,
         "mappings" : [
           {
+            "command" : false,
             "option" : false,
-            "shift" : false,
             "control" : false,
             "action" : "missionControl",
             "button" : 2,
-            "command" : false
+            "shift" : false
           }
         ]
-      },
-      "scrolling" : {
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "speed" : {
-          "vertical" : 0
-        },
-        "acceleration" : {
-          "vertical" : 1
-        }
-      },
-      "pointer" : {
-        "speed" : 0.1,
-        "acceleration" : 3,
-        "disableAcceleration" : false
       }
     },
     {
-      "pointer" : {
-        "speed" : 0.5,
-        "disableAcceleration" : false,
-        "acceleration" : 0
-      },
       "if" : {
         "device" : {
+          "category" : "mouse",
           "productID" : "0xb023",
           "productName" : "MX Master 3",
-          "vendorID" : "0x46d",
           "serialNumber" : "90C6DE16F31966AB",
-          "category" : "mouse"
+          "vendorID" : "0x46d"
         }
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "action" : "missionControl",
-            "button" : 2,
-            "shift" : false,
-            "control" : false,
-            "command" : false,
-            "option" : false
-          }
-        ],
-        "universalBackForward" : true
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
         },
         "reverse" : {
           "vertical" : false
         },
         "speed" : {
           "vertical" : 0
-        },
-        "distance" : {
-          "vertical" : "auto"
         }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "button" : 2,
+            "option" : false,
+            "action" : "missionControl",
+            "control" : false,
+            "shift" : false,
+            "command" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "disableAcceleration" : false,
+        "speed" : 0.5
       }
     },
     {
       "if" : {
         "device" : {
-          "category" : "trackpad",
           "productID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "vendorID" : "0x0"
+          "vendorID" : "0x0",
+          "category" : "trackpad",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
         }
       },
       "scrolling" : {
