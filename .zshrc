@@ -107,12 +107,15 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
 alias ls="eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --all"
 alias fzf="fzf --preview='cat {}'"
+alias cx="cd "$@" && eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --all"
 
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Add Docker Desktop for Mac (docker)
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
 export PATH="/usr/local/bin:$PATH"
 # useful only for Mac OS Silicon M1, 
@@ -143,3 +146,8 @@ export PATH="$PATH:/Users/parkervandyk/.lmstudio/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/parkervandyk/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
