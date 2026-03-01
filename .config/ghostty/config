@@ -1,0 +1,63 @@
+# Ghostty Configuration
+# Save this as: ~/.config/ghostty/config
+
+# Window appearance
+window-decoration = true
+
+# Theme
+theme = catppuccin-mocha.conf
+
+# Font
+font-family = "Menlo"
+font-style = Regular
+font-size = 14
+
+# Window transparency and blur
+#background-opacity = 0.75
+#background-blur-radius = 25
+
+# Shell
+shell-integration = zsh
+command = /bin/zsh
+shell-integration-features = cursor,sudo,title
+
+# Tab bar
+window-theme = auto
+gtk-tabs-location = hidden
+
+# Mouse
+mouse-hide-while-typing = true
+
+# cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+# Performance
+# Ghostty is designed for high performance by default
+
+# Keybindings
+# Split panes horizontally (Hyper + |)
+keybind = super+ctrl+alt+shift+backslash=new_split:right
+
+# Split panes vertically (Hyper + -)
+keybind = super+ctrl+alt+shift+minus=new_split:down
+
+# Close pane (CMD + W)
+keybind = super+w=close_surface
+
+# Note: Ghostty uses different terminology:
+# - "split" instead of WezTerm's pane splits
+# - super = CMD on macOS
+# - Ghostty automatically handles FPS optimization
+
+# Create new split to the right (for Neovim)
+keybind = cmd+d=new_split:right
+
+# Create new split below (for your shell)
+keybind = cmd+shift+t=new_split:down
+
+# Navigate between panes (vim-style)
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right

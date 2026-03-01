@@ -1,0 +1,102 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "vim_mode": true,
+  "icon_theme": "Catppuccin Mocha",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato"
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "show_commit_summary": true,
+      "delay_ms": 0
+    }
+  },
+  "agent": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-thinking-latest"
+    },
+    "model_parameters": []
+  },
+  "project_panel": {
+    "dock": "left",
+    "starts_open": true,
+    "auto_fold_dirs": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "ui_font_family": "Menlo",
+  "agent_ui_font_size": 14,
+  "buffer_font_family": "Menlo",
+  "agent_buffer_font_size": 14,
+  "cursor_shape": "block",
+  "cursor_blink": false,
+  "tab_bar": {
+    "show": true
+  },
+  // rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
+  "terminal": {
+    "blinking": "off",
+    "cursor_shape": "block",
+    "font_family": "Menlo",
+    "font_size": 14.0
+  },
+  "relative_line_numbers": "enabled",
+  "gutter": {
+    "line_numbers": true,
+    "breakpoints": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "current_line_highlight": "gutter",
+  "show_whitespaces": "none",
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "languages": {
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "eslint"
+        }
+      }
+    }
+  },
+  "show_wrap_guides": true,
+  "wrap_guides": [
+    150
+  ],
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0
+}
