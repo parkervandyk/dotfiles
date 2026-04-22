@@ -1,0 +1,36 @@
+// Claude + TDD layout.
+//
+// Main pane (~55%): claude.
+// Top-right: shell for ad-hoc commands.
+// Middle-right: file watcher (e.g. `watchexec rspec` / `bin/rspec --watch`).
+// Bottom-right: tail log.
+//
+// Usage:
+//   cd <repo>
+//   zellij --layout claude-tdd
+//
+// Works best in envoy-web where you want Rails logs + a red/green loop while
+// Claude edits specs.
+
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="claude-tdd" focus=true {
+        pane split_direction="vertical" {
+            pane size="55%" {
+                name "claude"
+                command "claude"
+            }
+            pane split_direction="horizontal" {
+                pane name="shell"
+                pane name="watch" size="40%"
+                pane name="logs" size="30%"
+            }
+        }
+    }
+}

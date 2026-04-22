@@ -1,0 +1,33 @@
+// Claude Code three-pane workflow.
+//
+// Main pane (~65%): runs `claude`.
+// Right column: shell on top, empty shell on bottom (for logs/tests per repo).
+//
+// Usage:
+//   cd <repo>
+//   zellij --layout claude
+//
+// Or add an alias in .zshrc:
+//   alias zc='zellij --layout claude'
+
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="claude" focus=true {
+        pane split_direction="vertical" {
+            pane size="65%" {
+                name "claude"
+                command "claude"
+            }
+            pane split_direction="horizontal" {
+                pane name="shell"
+                pane name="logs/tests"
+            }
+        }
+    }
+}

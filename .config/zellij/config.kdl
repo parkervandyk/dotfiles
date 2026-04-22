@@ -1,0 +1,42 @@
+// Zellij base config.
+// Reference: https://zellij.dev/documentation/configuration
+
+// ── Shell ─────────────────────────────────────────────────────────────────────
+default_shell "zsh"
+
+// ── UI ────────────────────────────────────────────────────────────────────────
+// Cleaner look: drop pane borders, keep the status + tab bars.
+pane_frames false
+simplified_ui true
+mouse_mode true
+copy_on_select true
+scroll_buffer_size 50000
+
+// Show the keybinding hints at the bottom only when in a non-normal mode
+// (less visual noise during normal use).
+default_mode "normal"
+
+// ── Theme ────────────────────────────────────────────────────────────────────
+// Dark, matches ghostty. Swap for "dracula" / "nord" / "tokyo-night" if desired.
+theme "catppuccin-mocha"
+
+// ── Session defaults ─────────────────────────────────────────────────────────
+session_serialization true       // resume panes after restart
+pane_viewport_serialization true
+
+// ── Keybindings ──────────────────────────────────────────────────────────────
+// Zellij defaults are good; only a couple of overrides.
+keybinds {
+    // In Ghostty, Cmd+K clears the scrollback — let it pass through.
+    shared_except "locked" {
+        bind "Ctrl g" { SwitchToMode "Locked"; }
+    }
+}
+
+// ── Plugins ──────────────────────────────────────────────────────────────────
+plugins {
+    tab-bar    { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider    { path "strider"; }
+    compact-bar { path "compact-bar"; }
+}
