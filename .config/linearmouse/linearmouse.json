@@ -1,24 +1,26 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "button" : 2,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : false
+      },
       "if" : {
         "device" : {
+          "category" : "mouse",
           "productID" : "0xb8",
           "productName" : "Wired Gaming Mouse",
-          "category" : "mouse",
           "vendorID" : "0x32e3"
-        }
-      },
-      "scrolling" : {
-        "speed" : {
-          "vertical" : 0
-        },
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : {
-          "vertical" : 1
         }
       },
       "pointer" : {
@@ -26,21 +28,32 @@
         "disableAcceleration" : false,
         "speed" : 0.1
       },
-      "buttons" : {
-        "universalBackForward" : false,
-        "mappings" : [
-          {
-            "command" : false,
-            "option" : false,
-            "control" : false,
-            "action" : "missionControl",
-            "button" : 2,
-            "shift" : false
-          }
-        ]
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
       }
     },
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "button" : 2,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
       "if" : {
         "device" : {
           "category" : "mouse",
@@ -49,6 +62,11 @@
           "serialNumber" : "90C6DE16F31966AB",
           "vendorID" : "0x46d"
         }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "disableAcceleration" : false,
+        "speed" : 0.5
       },
       "scrolling" : {
         "acceleration" : {
@@ -63,38 +81,106 @@
         "speed" : {
           "vertical" : 0
         }
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "button" : 2,
-            "option" : false,
-            "action" : "missionControl",
-            "control" : false,
-            "shift" : false,
-            "command" : false
-          }
-        ],
-        "universalBackForward" : true
-      },
-      "pointer" : {
-        "acceleration" : 0,
-        "disableAcceleration" : false,
-        "speed" : 0.5
       }
     },
     {
       "if" : {
         "device" : {
-          "productID" : "0x0",
-          "vendorID" : "0x0",
           "category" : "trackpad",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
+          "productID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0"
         }
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "button" : 5,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb028",
+          "productName" : "MX Master 3 B",
+          "serialNumber" : "C31C46B5",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "button" : 2,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb01d",
+          "productName" : "MX Ergo",
+          "serialNumber" : "ADFE463DB5A04AFF",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "speed" : 0.1364
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl",
+            "button" : 5,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb034",
+          "productName" : "MX Master 3S",
+          "serialNumber" : "6DA34892",
+          "vendorID" : "0x46d"
         }
       }
     }

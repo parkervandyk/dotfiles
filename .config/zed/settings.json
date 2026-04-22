@@ -7,15 +7,36 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "vim": {
+    "cursor_shape": {
+      
+    }
+  },
+  "bottom_dock_layout": "contained",
+  "tabs": {
+    "git_status": false
+  },
   "edit_predictions": {
     "provider": "zed"
   },
   "vim_mode": true,
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Mocha"
   },
   "git": {
     "git_gutter": "tracked_files",
@@ -33,6 +54,7 @@
     "model_parameters": []
   },
   "project_panel": {
+    "diagnostic_badges": true,
     "dock": "left",
     "starts_open": true,
     "auto_fold_dirs": false
@@ -48,6 +70,8 @@
   "cursor_shape": "block",
   "cursor_blink": false,
   "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
     "show": true
   },
   // rainbow indentation
@@ -59,7 +83,7 @@
     "enabled": false
   },
   "terminal": {
-    "blinking": "off",
+    "blinking": "terminal_controlled",
     "cursor_shape": "block",
     "font_family": "Menlo",
     "font_size": 14.0

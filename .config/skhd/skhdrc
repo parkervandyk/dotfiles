@@ -6,10 +6,27 @@ ctrl - t : yabai -m window --toggle float;\
   yabai -m window --grid 4:4:1:1:2:2
 
 # lock screen immediately
-#cmd - escape : open -a ScreenSaverEngine
+ctrl - escape : open -a ScreenSaverEngine
 
 # change window focus within space with vimish keybindings
 ctrl - j : window --focus west
 ctrl - k : window --focus south
 ctrl - l : window --focus north
 ctrl - ; : window --focus east
+
+# arrange two Zed windows side by side (left | right)
+shift + ctrl - z : \
+  ids=$(yabai -m query --windows | jq '[.[] | select(.app == "Zed")] | .[0].id, .[1].id' | tr '\n' ' '); \
+  id1=$(echo $ids | awk '{print $1}'); \
+  id2=$(echo $ids | awk '{print $2}'); \
+  [ -n "$id1" ] && yabai -m window $id1 --grid 1:2:0:0:1:1; \
+  [ -n "$id2" ] && yabai -m window $id2 --grid 1:2:1:0:1:1
+
+# move window to space #
+shift + ctrl - 1 : yabai -m window --space 1;
+shift + ctrl - 2 : yabai -m window --space 2;
+shift + ctrl - 3 : yabai -m window --space 3;
+shift + ctrl - 4 : yabai -m window --space 4;
+shift + ctrl - 5 : yabai -m window --space 5;
+shift + ctrl - 6 : yabai -m window --space 6;
+shift + ctrl - 7 : yabai -m window --space 7;

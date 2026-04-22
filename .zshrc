@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Example aliases
 alias v=nvim
+alias c=claude
 alias vi=nvim
 alias vim=nvim
 alias pip=pip3
@@ -105,9 +106,11 @@ alias python=python3
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
-alias ls="eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --all"
+alias ls="eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias fzf="fzf --preview='cat {}'"
 alias cx="cd "$@" && eza --tree --level=1 --long --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --all"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 
 
 export NVM_DIR="$HOME/.config/nvm"
@@ -151,3 +154,25 @@ fpath=(/Users/parkervandyk/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+# Added by GitButler installer
+eval "$(but completions zsh)"
+
+export ECR_PROD="160150123076.dkr.ecr.us-east-1.amazonaws.com"
+alias ecr='okta-aws-cli --profile envoy-production; AWS_PROFILE=envoy-production docker'
+alias kprod='okta-aws-cli --profile envoy-production && aws eks --region us-east-1 update-kubeconfig --name Sirius --profile envoy-production'
+alias kstaging='okta-aws-cli --profile envoy-staging && aws eks --region us-east-2 update-kubeconfig --name Chryseis --profile envoy-staging'
+alias kprod-eu='okta-aws-cli --profile envoy-eu && aws eks --region eu-central-1 update-kubeconfig --name Europa --profile envoy-eu'
+alias k='kubectl'
+
+# Claude Code CLI aliases
+[ -f ~/.claude/scripts/aliases.sh ] && source ~/.claude/scripts/aliases.sh
+
+alias claude-mem='bun "/Users/parker.vandyk/.claude/plugins/cache/thedotmack/claude-mem/12.0.1/scripts/worker-service.cjs"'
+
+# Claude Context MCP (Zilliz/OpenAI) — secrets in ~/.zshrc.local
+export EMBEDDING_PROVIDER="OpenAI"
+export EMBEDDING_BATCH_SIZE="512"
+
+# Source machine-local overrides (secrets, per-machine config)
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
